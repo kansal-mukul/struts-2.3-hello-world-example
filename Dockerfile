@@ -21,7 +21,7 @@ FROM tomcat:latest
 RUN rm -rf /usr/local/tomcat/webapps/*
 
 # Copy the Struts application WAR file built in Stage 1 to the Tomcat webapps directory
-COPY --from=builder /app/target/your-app.war /usr/local/tomcat/webapps/
+COPY --from=builder /app/target/struts-2.3-hello-world-example.war /usr/local/tomcat/webapps/
 
 # Expose the default Tomcat port
 EXPOSE 8080
